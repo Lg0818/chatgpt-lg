@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ChatGPT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.0/milligram.min.css">
+    <style>
+        body {
+            background-color: #eee;
+        }
+
+        .container {
+            margin-top: 2em;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 1.5em;
+        }
+
+        .card-title {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 1em;
+        }
+
+        .form-label {
+            font-weight: bold;
+            margin-bottom: 0.5em;
+        }
+
+        .form-input {
+            border: none;
+            border-radius: 3px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 1.2em;
+            padding: 0.5em;
+            width: 100%;
+        }
+
+        .form-submit {
+            background-color: #007aff;
+            border: none;
+            border-radius: 3px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            color: #fff;
+            font-size: 1.2em;
+            padding: 0.5em 1em;
+            margin-top: 1em;
+        }
+
+        .form-submit:hover {
+            background-color: #0063cc;
+            cursor: pointer;
+        }
+
+        .chat-output {
+            margin-top: 2em;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .chat-output p {
+            margin-bottom: 0.5em;
+        }
+
+        .chat-output .chat-bot {
+            color: #007aff;
+        }
+
+        .chat-output .user {
+            color: #4cd964;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="card">
+        <div class="card-title">ChatGPT</div>
+        <form method="POST" action="/submit-form">
+            <label for="input-field" class="form-label">Ask me anything:</label>
+            <input type="text" id="input-field" name="input-field" class="form-input" required>
+            <br>
+            <input type="submit" value="Ask" class="form-submit">
+        </form>
+    </div>
+    <div class="chat-output"></div>
+</div>
+<script>
+    const form = document.querySelector('form');
+    const output = document.querySelector('.chat-output');
+
+    form.addEventListener('submit', event => {
+        event.preventDefault();
+    const input = event.target.elements['input-field'];
+    const userInput = input.value.trim();
+    input.value = '';
+
+    const chatBot = document.createElement
+
+
