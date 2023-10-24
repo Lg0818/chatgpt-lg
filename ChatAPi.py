@@ -3,7 +3,7 @@ from revChatGPT.V3 import Chatbot
 from flask import Flask, request, render_template, jsonify
 from gevent import pywsgi
 import threading
-
+# 这里的文件路径有问题
 app = Flask(__name__, template_folder='/www/wwwroot/chatgpt')
 
 # 初始化 Chatbot 对象
